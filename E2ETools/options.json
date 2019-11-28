@@ -1,0 +1,22 @@
+{
+  "jiraUserName": "",
+  "jiraPassword": "",
+  
+  // Jira project name. For example, PIVOTAL
+  "jiraProjectName": "",
+  
+  // Regex for validate business goal
+  "businessGoalRegex": "(As [-\\w\\s\\d'\"]+,? I (should|must|want to) (see|get|be able to) [-\\w\\s\\d'\"&,]+ when [-\\w\\s\\d'\"_]+ [-\\w\\s\\d'\"_]+\\.?)",
+  
+  // Path to yaml file with ticket description. If empty, program will ask for the file every time.
+  "yamlFile": "",
+  
+  // Jira tickets for attributes. For example, "Accessible": "PIVOTAL-7725"
+  "attributes": {
+    "Accessible": "",
+    "Consistent": "",
+    "Fast": "",
+    "Secure": "",
+    "Traceable": ""
+  }
+}

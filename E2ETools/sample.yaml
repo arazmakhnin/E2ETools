@@ -1,0 +1,51 @@
+ticket: https://jira.devfactory.com/browse/PIVOTAL-8167
+businessGoal: As an administrator I should be able to view Transporter items in the file when I'm working with Pivotal Toolkit.
+summary: 'Toolkit Transporter: View Transporter File'
+
+preconditions:
+  environment:
+    - Use test environment selected for functional E2Es via RDP
+    - '[Environment documentation|https://docs.google.com/document/d/1qzUWlIXUjULcli0ca0QBlpT4LBAjUiNslU3qs5E5Jpw/edit?usp=sharing]'
+  
+  userCredentials:
+    # You can leave any precondition section empty or even don't mention it at all. In this case the tool will automatically add "(N/A)" item.
+
+  systemSettings:
+    - User is connected to 'central-kerio-vpn.devfactory.com', (Kerio or SoftEther installed and running)
+    - '[Instructions|https://docs.google.com/document/d/1VYPY4TeQ-hiYZX_fBzwgtzVJZbvtkgdl857gz5x1_jM/edit]'
+
+  applicationConfiguration:
+    # Another empty section
+
+  # Also, any section can contain multiple items. For example:
+  dataPrerequisites:
+    -
+      - Access to Pivotal Toolkit Customization component
+      - PIVOTAL-5075
+    -
+      - Sample data item - row 2
+      - Sample details item - row 2
+
+steps:
+  - 
+    - Select "Transporter" item from the left menu.
+    - Sub-menu items displayed.
+  -
+    - Select "Browse Transporter File..." item.
+    - A new open file dialog opened.
+  -
+    - 'Select any *.rtr file (for example, in "C:\Program Files (x86)\Aptean\Pivotal CRM\UX Client\RTRs" location) and press "Open" button.'
+    - |
+      Dialog closed.
+      A new "Transporter File" window opened.
+  -
+    - Check "File Name" field.
+    - It should contain full path to opened file (for example, "C:\Program Files (x86)\Aptean\Pivotal CRM\UX Client\RTRs\Favorites upgrade.rtr")
+  -
+    - Go to "Contents" tab.
+    - Verify that there are items in the table.
+  -
+    - Close the window.
+    - Window closed.
+  
+ 
